@@ -41,5 +41,9 @@ def login():
 def post_article():
     return render_template("post_article.html")
 
+@app.route("/bogus_function")
+def bogus_function():
+    return render_template("<h1>hello</h1>")
+
 if __name__ == "__main__":  # is the same thing as calling the run function
     app.run(host="0.0.0.0")
