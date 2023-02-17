@@ -1,0 +1,27 @@
+{
+  "articles":[
+    {
+      "title": "Swarm Weapons",
+      "author": "Sean Williams",
+      "date": "Aug 19 2023",
+      "image": "swarm.jpg",
+      "html": "<h1> Hello </h2>"
+    },
+
+    {
+      "title": "The Art of Video Games",
+      "author": "Gabe Williams",
+      "date": "Aug 19 2023",
+      "image": "photo.jpg",
+      "html": "<h1> Hello </h2>"
+    },
+
+    {
+      "title": "Swarm Weapons",
+      "author": "Sean Williams",
+      "date": "Aug 19 2023",
+      "image": "banner.jpg",
+      "html": "<h1> Hello </h2>"
+    },
+  ]
+}

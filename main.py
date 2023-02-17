@@ -5,11 +5,10 @@ app = Flask(__name__)
 
 @app.route("/")  # goes to the home page
 def home_page():
-    #blog_url = "https://api.npoint.io/ec6c46fa70d4e754d079"
-    #response = requests.get(blog_url)
-    #all_posts = response.json()
-    #return render_template('index.html', blog_posts=all_posts)
-    return render_template('index.html')
+    blog_url = "https://api.npoint.io/b31682e16f34ffcc119d"
+    response = requests.get(blog_url)
+    all_posts = response.json()
+    return render_template('index.html', blog_posts=all_posts)
 
 @app.route("/projects")
 def project_page():

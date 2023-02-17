@@ -24,75 +24,21 @@
     </div>
 
     <!--Carousel-->
-    <div class="container-fluid">
-        <div id="postCarousel" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active" stylesheet = "text-align: center">
-                    <div class="row">
-                        <div class=" article-box col-sm-12 col-md-6 col-lg-4">
-                            <h4>Article Title</h4>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
-                            <button type="button" class="btn btn-outline-dark"><i class="fa-brands fa-readme"></i> Read </button>
-                        </div>
-                        <div class=" article-box col-sm-12 col-md-6 col-lg-4">
-                            <h4>Article Title</h4>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
-                            <button type="button" class="btn btn-outline-dark"><i class="fa-brands fa-readme"></i> Read </button>
-                        </div>
-                        <div class=" article-box col-sm-12 col-md-6 col-lg-4">
-                            <h4>Article Title</h4>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
-                            <a href="{{url_for('article_page') }}">Read</a>
-                        </div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" style="padding: 2%">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row" style="padding: 2%">
+                    <div class="container-fluid col-sm-12 col-md-6 col-lg-6">
+                        <img src="{{blog_posts['articles'][0]['image']}}" class="img-fluid" alt="image">
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class=" article-box col-sm-12 col-md-6 col-lg-4">
-                            <h4>Article Title</h4>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
-                            <button type="button" class="btn btn-outline-dark"><i class="fa-brands fa-readme"></i> Read </button>
-                        </div>
-                        <div class=" article-box col-sm-12 col-md-6 col-lg-4">
-                            <h4>Article Title</h4>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
-                            <button type="button" class="btn btn-outline-dark"><i class="fa-brands fa-readme"></i> Read </button>
-                        </div>
-                        <div class=" article-box col-sm-12 col-md-6 col-lg-4">
-                            <h4>Article Title</h4>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
-                            <button type="button" class="btn btn-outline-dark"><i class="fa-brands fa-readme"></i> Read </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class=" article-box col-sm-12 col-md-6 col-lg-4">
-                            <h4>Article Title</h4>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
-                            <button type="button" class="btn btn-outline-dark"><i class="fa-brands fa-readme"></i> Read </button>
-                        </div>
-                        <div class=" article-box col-sm-12 col-md-6 col-lg-4">
-                            <h4>Article Title</h4>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
-                            <button type="button" class="btn btn-outline-dark"><i class="fa-brands fa-readme"></i> Read </button>
-                        </div>
-                        <div class=" article-box col-sm-12 col-md-6 col-lg-4">
-                            <h4>Article Title</h4>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
-                            <button type="button" class="btn btn-outline-dark"><i class="fa-brands fa-readme"></i> Read </button>
-                        </div>
+                    <div class="article-box border border-dark-subtle d-flex flex-column justify-content-center col-sm-12 col-md-6 col-lg-6" style="padding: 1%">
+                        <h4>{{blog_posts["articles"][0]["title"]}}</h4>
+                        <br><br>{{blog_posts["articles"][0]["Abstract"]}} <br><br>
+                        <button type="button" class="btn btn-outline-dark" onclick="location.href='{{url_for('article_page')}}'"><i class="fa-brands fa-readme"></i> Read </button>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#postCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="false"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#postCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="false"></span>
-            </button>
         </div>
     </div>
-
-    </body>
+</body>
 </html>
