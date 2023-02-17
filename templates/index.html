@@ -18,26 +18,68 @@
     <!--Inserting navigation bar which is the header-->
     {% include "header.html" %}
 
-    <!--Banner-->
-    <div class="container-fluid">
-        <img src="static/images/banner.jpg" class="img-fluid" alt="image">
+
+    <!-- Jumbotron -->
+    <div class="bg-image text-center shadow-1-strong text-white d-flex flex-column p-3" style="background-image: url('/static/images/photo.jpg'); height: 600px;">
+        <h1>AutonomyAI</h1>
+        <h5><br></h5>
+        <h3>
+            Mission: Help facilitate the next technological revolution using explainable AI solutions to bridge the gap between AI solutions and human users.
+        </h3>
     </div>
 
     <!--Carousel-->
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" style="padding: 2%">
-        <div class="carousel-inner">
+    <div id="carousel_of_articles" class="carousel" style="padding: 5%">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel_of_articles" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel_of_articles" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel_of_articles" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" style="padding: 5%">
             <div class="carousel-item active">
-                <div class="row" style="padding: 2%">
-                    <div class="container-fluid col-sm-12 col-md-6 col-lg-6">
+                <div class="row">
+                    <div class="container col-sm-12 col-md-6 col-lg-6">
                         <img src="{{blog_posts['articles'][0]['image']}}" class="img-fluid" alt="image">
                     </div>
-                    <div class="article-box border border-dark-subtle d-flex flex-column justify-content-center col-sm-12 col-md-6 col-lg-6" style="padding: 1%">
-                        <h4>{{blog_posts["articles"][0]["title"]}}</h4>
-                        <br><br>{{blog_posts["articles"][0]["Abstract"]}} <br><br>
+                    <div class="article-box border border-dark-subtle d-flex flex-column justify-content-between col-sm-12 col-md-6 col-lg-6 p-4">
+                        <h3 style="text-align: center;">{{blog_posts["articles"][0]["title"]}}</h3>
+                        <br><br><h5 style="text-align: center;">{{blog_posts["articles"][0]["Abstract"]}}</h5> <br><br>
                         <button type="button" class="btn btn-outline-dark" onclick="location.href='{{url_for('article_page')}}'"><i class="fa-brands fa-readme"></i> Read </button>
                     </div>
                 </div>
             </div>
+            <div class="carousel-item">
+                <div class="row row-lg-6">
+                    <div class="container col-sm-12 col-md-6 col-lg-6">
+                        <img src="{{blog_posts['articles'][1]['image']}}" class="img-fluid" alt="image">
+                    </div>
+                    <div class="article-box border border-dark-subtle d-flex flex-column justify-content-between col-sm-12 col-md-6 col-lg-6 p-4">
+                        <h3 style="text-align: center;">{{blog_posts["articles"][1]["title"]}}</h3>
+                        <br><br><h5 style="text-align: center;">{{blog_posts["articles"][1]["Abstract"]}}</h5> <br><br>
+                        <button type="button" class="btn btn-outline-dark" onclick="location.href='{{url_for('article_page')}}'"><i class="fa-brands fa-readme"></i> Read </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row row-lg-6">
+                    <div class="container col-sm-12 col-md-6 col-lg-4">
+                        <img src="{{blog_posts['articles'][2]['image']}}" class='img-fluid' alt="image">
+                    </div>
+                    <div class="article-box border border-dark-subtle d-flex flex-column justify-content-between col-sm-12 col-md-6 col-lg-6 p-4">
+                        <h3 style="text-align: center;">{{blog_posts["articles"][2]["title"]}}</h3>
+                        <br><br><h5 style="text-align: center;">{{blog_posts["articles"][2]["Abstract"]}} </h5><br><br>
+                        <button type="button" class="btn btn-outline-dark" onclick="location.href='{{url_for('article_page')}}'"><i class="fa-brands fa-readme"></i> Read </button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel_of_articles" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel_of_articles" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 </body>

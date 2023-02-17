@@ -23,9 +23,9 @@
             <div class="row justify-content-evenly gap-4">
                 {%for article in blog_posts["articles"]:%}
                     <div class="col border border-dark-subtle d-inline-flex flex-column justify-content-between col-sm-12 col-md-3 col-lg-3" style="padding: 2%">
-                        <h4>{{article["title"]}}</h4>
+                        <h4>{{article["title"]}}</h4><br>
                         <img src='{{article["image"]}}' class="img-fluid" alt="image">
-                        {{article["Abstract"]}}
+                        <br><br><br>
                         <button type="button" class="btn btn-outline-dark" onclick="location.href='{{url_for('article_page')}}'"><i class="fa-brands fa-readme"></i> Read </button>
                     </div>
                 {%endfor%}

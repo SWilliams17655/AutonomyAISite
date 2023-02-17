@@ -29,7 +29,12 @@ def articles_page():
 
 @app.route("/article")
 def article_page():
-    return render_template("article.html")
+    global blog_url
+    response = requests.get(blog_url)
+    all_posts = response.json()
+    article = all_posts["articles"][0]
+    print(article["date"])
+    return render_template("article.html", article=article)
 
 @app.route("/about_us")
 def about_us_page():
@@ -45,9 +50,6 @@ def login():
 def post_article():
     return render_template("post_article.html")
 
-@app.route("/bogus_function")
-def bogus_function():
-    return render_template("<h1>hello</h1>")
 
 if __name__ == "__main__":  # is the same thing as calling the run function
     app.run(host="0.0.0.0")

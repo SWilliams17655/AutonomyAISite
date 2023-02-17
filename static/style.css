@@ -1,9 +1,9 @@
 body {
     font-family: "Montserrat";
+    background: #2C74B3;
 }
-.article-box {
-    text-align: center;
-    padding: 3% 3% 3% 3%
+#carousel_of_articles{
+    background: #E9F8F9;
 }
 
 .container-fluid{
