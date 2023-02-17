@@ -1,0 +1,11 @@
+body {
+    font-family: "Montserrat";
+}
+.article-box {
+    text-align: center;
+    padding: 3% 3% 3% 3%
+}
+
+.container-fluid{
+    padding: 0%
+}
