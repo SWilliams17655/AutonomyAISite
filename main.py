@@ -20,7 +20,10 @@ def post_article_page():
 
 @app.route("/articles")
 def articles_page():
-    return render_template("articles.html")
+    blog_url = "https://api.npoint.io/b31682e16f34ffcc119d"
+    response = requests.get(blog_url)
+    all_posts = response.json()
+    return render_template('articles.html', blog_posts=all_posts)
 
 @app.route("/article")
 def article_page():

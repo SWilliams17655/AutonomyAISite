@@ -18,18 +18,18 @@
     <!--Inserting navigation bar which is the header-->
     {% include "header.html" %}
 
-    <div class="row">
-        <div class="article-box col-sm-12 col-md-6 col-lg-4">
-            <h4>Swarm Weapons: An Algorithm for Parallel Attack</h4>
-            <img src="static/images/swarm.jpg" class="img-fluid" alt="image">
-            Swarming platforms are coming of age and it is feasible that within the next two years, platforms employing swarm intelligent algorithms could provide operational advantages through employment concepts like cooperative survival, pulsing, and adaptive area reconnaissance. <br><br>
-            <button type="button" class="btn btn-outline-dark" onclick="location.href='{{url_for('article_page')}}'"><i class="fa-brands fa-readme"></i> Read </button>
-        </div>
-        <div class=" article-box col-sm-12 col-md-6 col-lg-4">
-            <h4>Article Title</h4>
-            <img src="static/images/banner.jpg" class="img-fluid" alt="image">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
-            <button type="button" class="btn btn-outline-dark"><i class="fa-brands fa-readme"></i> Read </button>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-evenly gap-4">
+                {%for article in blog_posts["articles"]:%}
+                    <div class="col border border-dark-subtle d-inline-flex flex-column justify-content-between col-sm-12 col-md-3 col-lg-3" style="padding: 2%">
+                        <h4>{{article["title"]}}</h4>
+                        <img src='{{article["image"]}}' class="img-fluid" alt="image">
+                        {{article["Abstract"]}}
+                        <button type="button" class="btn btn-outline-dark" onclick="location.href='{{url_for('article_page')}}'"><i class="fa-brands fa-readme"></i> Read </button>
+                    </div>
+                {%endfor%}
+            </div>
         </div>
     </div>
 </body>
