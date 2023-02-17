@@ -1,11 +1,13 @@
 from flask import Flask, render_template, request
 import requests
 
+global blog_url
+blog_url = "https://api.npoint.io/478c3a413404cfb6fb97"
 app = Flask(__name__)
 
 @app.route("/")  # goes to the home page
 def home_page():
-    blog_url = "https://api.npoint.io/478c3a413404cfb6fb97"
+    global blog_url
     response = requests.get(blog_url)
     all_posts = response.json()
     return render_template('index.html', blog_posts=all_posts)
@@ -20,7 +22,7 @@ def post_article_page():
 
 @app.route("/articles")
 def articles_page():
-    blog_url = "https://api.npoint.io/b31682e16f34ffcc119d"
+    global blog_url
     response = requests.get(blog_url)
     all_posts = response.json()
     return render_template('articles.html', blog_posts=all_posts)
